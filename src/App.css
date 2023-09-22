@@ -1,0 +1,137 @@
+/* for the outer container */
+.container {
+  text-align: center;
+  background-color: #030314;
+  height: 57.4vh;
+  padding: 8rem;
+  color: cornsilk;
+}
+
+/* making the background color different for the seleceted button */
+.selected {
+  background-color: whitesmoke;
+}
+
+/* button container */
+.button-container {
+  margin-left: 4rem;
+  padding: 5px;
+}
+.button-container button {
+  margin-right: 5rem;
+  height: 30px;
+  width: 75px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: solid;
+  color: #030314;
+}
+
+/* toolpit container */
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+  border: solid;
+  border-bottom: 1px dotted red;
+  margin-top: 7rem;
+  width: 10rem;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #d7e9dc;
+  font-weight: bold;
+}
+
+/* toolpit style */
+
+/* left style of the toolpit with the arrow */
+.left {
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  left: 27%;
+  margin-top: -2rem;
+}
+.left::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 100%; /* To the right of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+/* right style of the toolpit with the arrow */
+.right {
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  left: 60%;
+  margin-top: -2rem;
+}
+.right::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%; /* To the left of the tooltip */
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+/* top style of the toolpit with the arrow */
+.Up {
+  padding: 5px;
+  border-radius: 10px;
+  position: relative;
+  left: 44%;
+  margin-top: -80px;
+}
+.Up::after {
+  content: " ";
+  position: relative;
+  top: 100%; /* At the bottom of the tooltip */
+  padding: 10px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* bottom style of the toolptit with the arrow */
+.Down {
+  padding: 5px;
+  border-radius: 10px;
+  width: fit-content;
+  position: relative;
+  left: 44%;
+  margin-top: 1rem;
+  width: 30px;
+  font-weight: bold;
+}
+.Down::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%; /* At the top of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: outset;
+  border-color: transparent transparent black transparent;
+}
+
+/* text to be shown  */
+#tooltipText {
+  display: table;
+  background-color: whitesmoke;
+  color: black;
+  font-weight: bolder;
+  width: 8rem;
+  transition-duration: 1s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+  border-radius: 5px;
+}
